@@ -98,12 +98,11 @@
     <bool>true</bool>
    </property>
    <property name="plainText">
-    <string>
-    Creates layers based on field categories.
+    <string>Creates layers based on field categories.
 
-    If Shapefile is selected, separate layers are created for each category, with each layer named according to the category's value.
+If Shapefile is selected, separate layers are created for each category, with each layer named according to the category's value.
 
-    If GeoPackage is selected, a single .gpkg file is created, with each category represented as a distinct layer within the package.
+If GeoPackage is selected, a single .gpkg file is created, with each category represented as a distinct layer within the package.
     </string>
    </property>
   </widget>
