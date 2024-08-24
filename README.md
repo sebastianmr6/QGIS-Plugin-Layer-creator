@@ -39,5 +39,5 @@ This plugin is released under the GNU General Public License v2.0 or later.
 
 ## Author
 
-Sebastian Mejia Rios  
+Sebastian Mejia Rios.
 Contact: sebastianmr6@hotmail.com
