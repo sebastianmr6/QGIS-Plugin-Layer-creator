@@ -13,7 +13,7 @@ email=sebastianmr6@hotmail.com
 about=Easily generate new vector layers based on field values from any existing layer. This plugin simplifies the process of creating separate layers from field categories, enhancing data organization and analysis in QGIS.
 
 tracker=http://bugs
-repository=http://repo
+repository=https://github.com/sebastianmr6/QGIS-Plugin-Layer-creator
 # End of mandatory metadata
 
 # Recommended items:
