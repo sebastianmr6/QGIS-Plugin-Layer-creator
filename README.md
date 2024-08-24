@@ -10,6 +10,18 @@
 - **Supports Multiple Formats**: Export to GeoPackage or Shapefile formats.
 - **Customizable**: Choose to add the exported layers directly to your QGIS project.
 
+## Export Options
+
+### GeoPackage (GPKG)
+- **Single File Format**: Stores multiple layers in a single file.
+- **Advanced Features**: Supports complex geometries, SQL queries, and large datasets.
+- **Modern and Efficient**: Ideal for projects requiring comprehensive data management.
+
+### Shapefile (SHP)
+- **Multiple Files**: Each layer is stored in a set of files (`.shp`, `.shx`, `.dbf`).
+- **Legacy Format**: Limited in complexity, but widely compatible with older systems.
+- **Simple and Effective**: Best for straightforward projects or when backward compatibility is needed.
+
 ## Installation
 
 1. Download the plugin from the repository.
