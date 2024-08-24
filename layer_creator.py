@@ -152,7 +152,6 @@ class LayersFromField:
             action.setWhatsThis(whats_this)
 
         if add_to_toolbar:
-            # Agrega el ícono del plugin a la barra de herramientas de Plugins
             self.iface.addToolBarIcon(action)
 
         if add_to_menu:
@@ -174,9 +173,7 @@ class LayersFromField:
             callback=self.run,
             parent=self.iface.mainWindow())
 
-        # Inicializar todas las variables provenientes de PyQt
         self.dlg.run_button.clicked.connect(self.__procesar)
-        # self.dlg.mFeatureListComboBox.setFilters(QgsMapLayer.VectorLayer)
 
         # Se establecerá en False en run()
         self.first_start = True
@@ -197,7 +194,7 @@ class LayersFromField:
                 for field_value in unique_values:
                     query = f'"{field_name}" = \'{field_value}\''
                     layer.selectByExpression(query)
-                    # Eliminar caracteres especiales usando regex
+                    # delete special characters using regex
                     sanitized_value = re.sub(r'[^A-Za-z0-9]+', '_', field_value).strip()
                     
                     options = QgsVectorFileWriter.SaveVectorOptions()
@@ -214,7 +211,7 @@ class LayersFromField:
                 for field_value in unique_values:
                     query = f'"{field_name}" = \'{field_value}\''
                     layer.selectByExpression(query)
-                    # Eliminar caracteres especiales usando regex
+                    # delete special characters using regex
                     sanitized_value = re.sub(r'[^A-Za-z0-9 ]+', '', field_value).strip().replace(" ", "_")
                     file_name = file_path[:-4] + f'_{sanitized_value}.shp'
                     QgsVectorFileWriter.writeAsVectorFormat(layer, file_name, "utf-8", driverName="ESRI Shapefile", onlySelected=True)
@@ -252,15 +249,13 @@ class LayersFromField:
         # Solo crear GUI UNA VEZ en el callback, para que solo se cargue cuando se inicie el plugin
         if self.first_start:
             self.first_start = False
-            # Poblar el combo box con capas vectoriales
+            # Fill the combobox with vector layers
             self.__populate_vector_layers_combobox()
 
-        # Mostrar el diálogo
+        # Show the dialog
         self.dlg.show()
-        # Ejecutar el bucle de eventos del diálogo
+        # Run the dialog event loop
         result = self.dlg.exec_()
-        # Verificar si se presionó OK
+        # See if OK was pressed
         if result:
-            # Hacer algo útil aquí - elimina la línea que contiene pass y
-            # sustitúyela por tu código.
             pass
