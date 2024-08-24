@@ -98,11 +98,13 @@
     <bool>true</bool>
    </property>
    <property name="plainText">
-    <string>Crea capas a partir de las categorías de un campo.
+    <string>
+    Creates layers based on field categories.
 
-Si selecciona shapefile se crearán capas con el nombre de cada categoría.
+    If Shapefile is selected, separate layers are created for each category, with each layer named according to the category's value.
 
-Si selecciona geopackage se creará un .gpkg y cada capa dentro de este será la selección de cada categoría.</string>
+    If GeoPackage is selected, a single .gpkg file is created, with each category represented as a distinct layer within the package.
+    </string>
    </property>
   </widget>
  </widget>
